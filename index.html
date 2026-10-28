@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17233c">
+  <title>Guest Wi-Fi Registration</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="wifi-icon">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M2.5 8.8a15 15 0 0 1 19 0M5.7 12a10 10 0 0 1 12.6 0M9 15.3a5 5 0 0 1 6 0"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="12" cy="19" r="1.3" fill="currentColor"/>
+        </svg>
+      </div>
+
+       <span class="eyebrow">FREE WI-FI</span>
+        <h1>Connect with Us</h1>
+        <p class="description">
+        Register your name and mobile number to join
+        the free Wi-Fi guest registration.
+        </p>
+
+      <form id="registrationForm">
+        <div class="field">
+          <label for="fullName">Full name</label>
+          <input
+            id="fullName"
+            name="fullName"
+            type="text"
+            minlength="2"
+            maxlength="100"
+            autocomplete="name"
+            placeholder="Enter your full name"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="mobileNumber">Mobile number</label>
+          <input
+            id="mobileNumber"
+            name="mobileNumber"
+            type="tel"
+            minlength="7"
+            maxlength="20"
+            autocomplete="tel"
+            placeholder="e.g. 09XXXXXXXXX"
+            required
+          >
+        </div>
+
+        <button id="submitButton" type="submit">
+          <span>Submit Registration</span>
+          <span aria-hidden="true">→</span>
+        </button>
+
+        <p id="statusMessage" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="notice">
+        <span class="notice-icon" aria-hidden="true">ⓘ</span>
+        <p>
+          Your name and mobile number will be stored in the
+          registration database for guest registration.
+          Do not enter passwords, PINs, or other secret credentials.
+        </p>
+      </div>
+
+      <div class="footer">
+        <span class="footer-dot"></span>
+        Guest Registration Portal
+      </div>
+    </section>
+  </main>
+</body>
+</html>
